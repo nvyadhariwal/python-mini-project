@@ -34,7 +34,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest tests.py --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml
+       python -m pytest
 
     - name: Send test results to Slack
       uses: rtCamp/action-slack-notify@v2
